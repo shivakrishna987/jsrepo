@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doing average of six numbers</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>a</label></td>
+            <td><input type="text" id="k"></td>
+        </tr>
+        <tr>
+            <td><label >b</label></td>
+            <td><input type="text"  id="s"></td>
+        </tr>
+        <tr>
+            <td><label >c</label></td>
+            <td><input type="text"  id="h"></td>
+        </tr>
+        <tr>
+            <td><label >d</label></td>
+            <td><input type="text"  id="i"></td>
+        </tr>
+        <tr>
+            <td><label >e</label></td>
+            <td><input type="text"  id="v"></td>
+        </tr>
+        <tr>
+            <td><label >f</label></td>
+            <td><input type="text"  id="a"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="result" onclick="average()"></td>
+            <td><input type="text" id="ii" ></td>
+        </tr>
+        
+        <tr>
+            <td><input type="button" value="clear" onclick="erase()"></td>
+        </tr>
+    </table>
+    <script>
+        function average(){
+            a=eval(document.getElementById("k").value);
+            b=eval(document.getElementById("s").value);
+            c=eval(document.getElementById("h").value);
+            d=eval(document.getElementById("i").value);
+            e=eval(document.getElementById("v").value);
+            f=eval(document.getElementById("a").value);
+            c=(a+b+c+d+e+f)/6;
+
+            document.getElementById("ii").value=c;
+
+        }
+        function erase(){
+            document.getElementById('k').value=0;
+            document.getElementById("s").value=0;
+            document.getElementById('h').value=0;
+            document.getElementById('i').value=0;
+            document.getElementById('v').value=0;
+            document.getElementById('a').value=0;
+            document.getElementById('ii').value=0;
+        }
+    </script>
+</body>
+</html>

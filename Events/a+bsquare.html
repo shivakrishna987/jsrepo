@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doing a+b square</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>a</label></td>
+            <td><input type="text" id="k"></td>
+        </tr>
+        <tr>
+            <td><label >b</label></td>
+            <td><input type="text"  id="s"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="result" onclick="square()"></td>
+            <td><input type="text" id="h" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="clear" onclick="erase()"></td>
+        </tr>
+    </table>
+    <script>
+        function square(){
+            x=eval(document.getElementById("k").value);
+            y=eval(document.getElementById("s").value);
+            c=(x**2)+(y**2)+(2*(x*y));
+            document.getElementById("h").value=c;
+
+        }
+        function erase(){
+            document.getElementById('k').value=0;
+            document.getElementById("s").value=0;
+            document.getElementById('h').value=0;
+        }
+    </script>
+</body>
+</html>

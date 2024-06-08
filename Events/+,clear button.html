@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>knowing about + , clear button</title>
+</head>
+<body>
+    <input type="text" id="para1" >
+    <input type="text" id="para2" >
+    <input type="button" value="+" onclick="sum()">
+    <input type="text" id="para3">
+    <input type="button" onclick="erase()" value="clear">
+    <script>
+        function sum(){
+            a=eval(document.getElementById('para1').value);
+            b=eval(document.getElementById('para2').value);
+            let x=a+b;
+            document.getElementById('para3').value=x;
+        }
+        function erase(){
+            document.getElementById('para1').value=0;
+            document.getElementById("para2").value=0;
+            document.getElementById('para3').value=0;
+        }
+    </script>
+</body>
+</html>
